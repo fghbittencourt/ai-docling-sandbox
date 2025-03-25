@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+.env/
+local/
+*.egg-info/
+*.egg
+develop-eggs/
+dist/
+build/
+eggs/
+parts/
+bin/
+lib/
+lib64/
+sdist/
+var/
+wheels/
+share/cache/
+share/pip-cache/
+.wheels
+*.whl
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+
+# Poetry
+poetry.lock
+
+# Environments
+.env
+.venv
+venv
+env
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.sock
+
+# Environments (virtualenv, pipenv, conda, etc.)
+.env_bak/
+.venv_bak/
+venv_bak/
+env.bak/
+.environment/
+conda-bld/
+conda-recipe/
+build_artifacts/
+.project/
+.ropeproject/
+.gitattributes
+.git-id
+.ipynb_checkpoints
+*.rej
+*.orig
+*.pyc
+*.pyo
+*.pyi
+*.pdc
+$py.class
+*.dll
+*.so
+*.dylib
+*.pyd
+*.cpython-3??.pyc
+*.pytest_cache
+*.DS_Store
