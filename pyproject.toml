@@ -8,8 +8,9 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-docling = "^2.28.0"
+docling = "^2.28.1"
 certifi = "^2025.1.31"
+psutil = "^7.0.0"
 
 
 [build-system]
