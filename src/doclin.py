@@ -25,7 +25,7 @@ class DocumentProcessor:
         pipeline_options.table_structure_options.do_cell_matching = True
         # pipeline_options.ocr_options.lang = ["pt"]
         pipeline_options.accelerator_options = AcceleratorOptions(
-            num_threads=2, device=AcceleratorDevice.AUTO
+            num_threads=1, device=AcceleratorDevice.CPU
         )
 
         self.converter = DocumentConverter(
@@ -53,19 +53,11 @@ class DocumentProcessor:
 
 
 def main():
-    source = "input/conta enel.pdf"  # document per local path or URL
+    source = "input/file.pdf"  # document per local path or URL
     processor = DocumentProcessor()
     processed_doc = processor.process_document(source)
     if processed_doc:
         with open("output/file.md", "w", encoding="utf-8") as f:
-            f.write(processed_doc)
-
-        print_memory_usage(f"✅ Doc. processed!")
-
-    source = "input/conta equatorial.pdf"
-    processed_doc = processor.process_document(source)
-    if processed_doc:
-        with open("output/file2.md", "w", encoding="utf-8") as f:
             f.write(processed_doc)
 
         print_memory_usage(f"✅ Doc. processed!")

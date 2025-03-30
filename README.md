@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Python 3.8 or higher
+- Python 3.11.11
 - Poetry (for dependency management)
 
 ## Installation
