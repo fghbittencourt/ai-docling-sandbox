@@ -22,7 +22,7 @@ class PoemComparison(BaseModel):
     stronger_elements: List[str] = Field(
         description="Which poem is stronger in different aspects"
     )
-    recommendation: str = Field(
+    recommendation: List[str] = Field(
         description="Which poem might appeal to different readers"
     )
 
@@ -106,10 +106,10 @@ if __name__ == "__main__":
                     So long lives this, and this gives life to thee.""",
         },
         "Haiku": {
-            "title": "An old silent pond",
-            "text": """An old silent pond
-                    A frog jumps into the pond—
-                    Splash! Silence again.""",
+            "title": "Candle",
+            "text": """The light of a candle
+                    Is transferred to another candle
+                    spring twilight.""",
         },
     }
 
@@ -146,8 +146,9 @@ if __name__ == "__main__":
     print("\nComparison:")
     # print(parsed_comparison.model_dump_json(indent=2))
     # comparison = json.dumps(parsed_comparison, indent=2)
+    print(json.dumps(parsed_comparison, indent=2))
     comparison = PoemComparison(**parsed_comparison)
-    print(comparison)
+    # print(comparison)
 
     # Save results
     with open("poetry_analysis_results.json", "w") as f:
