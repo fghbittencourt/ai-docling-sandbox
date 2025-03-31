@@ -1,4 +1,6 @@
+import pathlib
 import pymupdf  # This is the correct import from PyMuPDF
+import pymupdf4llm
 
 
 def main():
@@ -16,6 +18,10 @@ def main():
         out.write(bytes((12,)))  # write page delimiter (form feed 0x0C)
 
     out.close()
+
+    md_text = pymupdf4llm.to_markdown("input/file.pdf")
+    pathlib.Path("output/pymu_markdown.md").write_bytes(md_text.encode())
+
     print("Text extraction complete.")
 
 
