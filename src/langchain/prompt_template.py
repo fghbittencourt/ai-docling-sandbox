@@ -16,7 +16,7 @@ def main():
 
     # Formatting a prompt
     formatted_prompt = prompt.format(
-        tone="melancholic", topic="artificial intelligence", poet="Edgar Allan Paul"
+        tone="melancholic", topic="artificial intelligence", poet="Edgar Allan Poe"
     )
     print("Formatted Prompt:")
     print(formatted_prompt)
@@ -42,7 +42,7 @@ def main():
         {
             "tone": "melancholic",
             "topic": "artificial intelligence",
-            "poet": "Edgar Allan Paul",
+            "poet": "Edgar Allan Poe",
         }
     )
     print("\nChain Result:")
