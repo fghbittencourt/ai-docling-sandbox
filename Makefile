@@ -1,14 +1,15 @@
 docling:
-	poetry run python src/doclin.py
+	poetry run python src/docling/doclin.py
 
 pymu:
-	poetry run python src/pymu.py
+	poetry run python src/pymu/pymu.py
 
 lc:
-	poetry run python src/lc.py
+	poetry run python src/langchain/lc.py
 
-setup-poetry:
+setup:
 	poetry config virtualenvs.in-project true
+	pyenv local 3.11.11  
 
 install: setup-poetry
 	poetry install

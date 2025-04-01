@@ -1,8 +1,18 @@
-# Docling Test Project
+# Langchain (and other libs) Test Project
+
+## Overview
+
+This project is a document processing tool built with Python. It utilizes the `docling` library to convert PDF documents into Markdown format, while also extracting table structures.
+
+## Features
+
+- **PDF to Markdown Conversion:** Converts PDF documents to Markdown for easier readability and editing.
+- **Table Structure Extraction:** Identifies and extracts table structures within PDF documents, preserving them in the Markdown output.
+- **Memory Usage Tracking:** Includes memory usage monitoring to help optimize performance.
 
 ## Requirements
 
-- Python 3.11.11
+- Python 3.11.11 (with pyenv for version management)
 - Poetry (for dependency management)
 
 ## Installation
@@ -22,17 +32,25 @@
    Navigate to the project directory in your terminal and run:
 
    ```bash
+   make setup
    make install
    ```
 
    This command will install all the dependencies listed in `pyproject.toml` and create a `poetry.lock` file to ensure consistent dependency versions.
 
-## Running the Project
+## Code Structure
 
-To run the main script, use the following command in your terminal from the project root directory:
+- `src/docling/doclin.py`: Contains the main application logic for document processing.
+- `src/docling/document_converter.py`: Includes the `DocumentConverter` class responsible for document conversion.
+- `src/docling/datamodel/`: Defines data models used within the `docling` library.
 
-```bash
-make run
-```
+## Usage
 
-This command uses Poetry to run the Python interpreter within the project's virtual environment, ensuring that all dependencies are correctly loaded.
+1. Place your PDF document in the `input/` directory, naming it `file.pdf`.
+2. Run the project using `make run`.
+3. Find the converted Markdown file in the `output/` directory as `file.md`.
+
+## Customization
+
+- Modify the `source` variable in `src/docling/doclin.py` to process different PDF documents or URLs.
+- Adjust `PdfPipelineOptions` in the `DocumentProcessor` class to customize the conversion pipeline, such as enabling OCR or changing accelerator options.
